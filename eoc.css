@@ -1,0 +1,355 @@
+/* =====================================
+   EoC HTML Stylesheet
+   ===================================== */
+main, body {
+  max-width: 700px;          /* page width in characters for readability -- don't want lines too long! */
+  color: #222;               /* dark gray -- easier on the eyes */
+  background: #fff;
+  margin: 0 auto; 
+  padding: 0 4rem;
+}
+
+/* Document fonts */
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  font-size: 3em;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-top: 2.0rem;
+  margin-bottom: 0.3rem;
+}
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 400;   /* Regular */
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.3;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+}
+.author {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0.6rem
+}
+.reviewers {
+  color: #8D2515;
+}
+
+/* Section Notes and End Notes headings override -- matches h2 formatting and adds border line. */
+.section-notes-title,
+.end-notes-title {
+  font-weight: 300;
+  text-align: center;
+  font-size: 2rem;          
+  line-height: 1.3;
+  margin-top: 5rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid #b8b8b8;
+}
+body {
+  font-family: "Optima", "Optima Regular", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;   /* Regular */
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* ---------- Table of Contents ---------- */
+.toc-links {
+  column-count: 2;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.toc-links p {
+  break-inside: avoid;
+  margin-bottom: 0.4rem;
+  margin: 0 0 0.35rem 0;
+}
+#table-of-contents {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Paragraphs ---------- */
+p {
+  margin: 0.4rem 0;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footnote references (no underline) ---------- */
+a.footnote-ref {
+  text-decoration: none;
+}
+/* fallback in case Pandoc uses <sup><a> without class */
+sup a {
+  text-decoration: none;
+}
+
+/* ---------- Images ---------- */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+/* Figures / diagram */
+.diagram {
+  max-width: min(700px, 90%);
+  margin: 1.5rem auto;
+}
+.diagram-cartoon {   /* scale retired theologian carton */
+  width: 80%;
+  margin: 2rem auto;
+  display: block;
+}
+.diagram-smaller {   /* scale images for improved visual design */
+  width: 70%;
+  margin: 2rem auto;
+  display: block;
+}
+.diagram-float-right {
+  float: right;
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  margin: 0.2rem 0 1rem 1rem;
+}
+@media (max-width: 700px) {
+  .diagram-float-right {
+    float: none;
+    display: block;
+    width: 80%;
+    max-width: 260px;
+    margin: 1rem auto;
+  }
+}
+.diagram-float-left {
+  float: left;
+  width: 220px;
+  margin: 0.2rem 1rem 1rem 0;
+}
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #222;
+  text-align: center;
+}
+
+/* ---------- Tables ---------- */
+/* Tables - summary table */
+.table-summary {
+  border: 2px solid #C58F33;
+  border-collapse: collapse;
+}
+.table-summary th {
+  background-color: #FAE3BA;
+}
+.table-summary {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-summary th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+.table-summary tbody tr:nth-child(even) {
+  background-color: #F9F5E8;
+}
+/* Tables - informational table */
+.table-info {
+  border: 2px solid #0076BA;
+  border-collapse: collapse;
+}
+.table-info th {
+  background-color: #C2DCFB;
+}
+.table-info {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-info th, td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+.table-info tbody tr:nth-child(even) {
+  background-color: #DFF3FF;
+}
+/* Tables - end-of-section navigation links */
+.section-nav table {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border-top: 1px solid #0645ad;
+  border-bottom: 1px solid #0645ad;
+}
+/*.section-nav table,*/
+.section-nav th,
+.section-nav td {
+  border: none;
+}
+.section-nav td {
+  text-align: center;
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.nav-arrow {
+  height: 1em;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+/* Base table behavior */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  clear: both;
+}
+/* Default table styling (only if no class is used) */
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+th {
+  background: #f5f5f5;
+}
+
+/* ---------- Blockquotes ---------- */
+blockquote {
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #444;
+  border-left: 3px solid #c4b5e0;
+}
+blockquote.blockquote-indent {
+  margin-left: 2.1rem;   /* match your ul padding */
+  border-left: 3px solid #d6cfe8;  /* your lavender */
+  padding-left: 0.6rem;
+  padding-right: 2rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  margin: 0.4rem 0 0.2rem 0;   /* remove left margin */
+  padding-left: 2.1rem;        /* control indent here */
+}
+li {
+  margin: 0rem 0;
+  padding-right: 2rem;
+}
+.compact-no-bullet-list p {
+  margin: 0rem 0;
+}
+
+/* ---------- Footnotes ---------- */
+a.footnote-ref {
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.footnotes {
+  font-size: 0.9em;
+  margin-top: 0.3rem;
+  padding-top: 1rem;
+}
+/* ---------- Styling for Tippy Footnote Hover behavior ---------- */
+.tippy-box[data-theme~='light-border'] {
+  font-family: Avenir, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222;
+  border: 1.5px solid #222 !important;  /* !important overrides Tippy format */
+  box-shadow: 0 10px 25px rgba(6, 6, 6, 0.50) !important;
+}
+.tippy-box[data-theme~='light-border'] > .tippy-content {
+  text-align: left;
+  padding: 0.65rem 0.8rem;
+}
+.tippy-box[data-theme~='light-border'] em {
+  font-style: italic;
+}
+.tippy-box[data-theme~='light-border'] strong {
+  font-weight: 600;
+}
+
+/* ---------- Callout blocks ---------- */
+
+.callout {
+  border-left: 4px solid #888;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ---------- Architecture statements ---------- */
+
+.architecture {
+  text-align: center;
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+/* ---------- Horizontal rule ---------- */
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+  display: none;
+}
+
+/* ---------- Small refinements ---------- */
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+
+/* ---------- Footer copyright notice ---------- */
+footer {
+  margin-top: 3rem;      /* space above footer */
+  padding-top: 1rem;     /* space inside footer */
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+
