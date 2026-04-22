@@ -1,0 +1,234 @@
+/* =====================================
+   Navtopics Stylesheet
+   Trimmed from essay.css
+   ===================================== */
+
+body {
+  max-width: 800px;
+  color: #222;
+  background: #fff;
+  margin: 0 auto;
+  padding: 0 4rem;
+  font-family: "Optima", "Optima Regular", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 800px;
+  width: min(800px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title, h1 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 2.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.author {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0.6rem
+}
+
+p {
+  margin: 0.4rem 0;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+/* =====================================
+   Table Styling (Navtopics)
+   ===================================== */
+
+/* Icon images */
+.toc-icon {
+  height: 48px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Base table styling (applies to all tables) */
+.topic-nav table,
+.topic-nav-summary table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.topic-nav th,
+.topic-nav td,
+.topic-nav-summary th,
+.topic-nav-summary td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+/*    Here's the color scheme: https://www.color-hex.com/color/a9e1c8  */
+/* Table header row and alternating data-row background colors */
+tbody tr:nth-child(even) {
+  background-color: #edf9f4;
+}
+.topic-nav th,
+.topic-nav-summary th {
+  background-color: #b1e4cd;
+}
+
+/* =====================================
+   Tables 1–6 (Topic | Title | Icon)
+   ===================================== */
+
+/* Column 1: Topic (wide, wraps) */
+.topic-nav table td:nth-child(1),
+.topic-nav table th:nth-child(1) {
+  width: 65%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Column 2: Title (medium, wraps) */
+.topic-nav table td:nth-child(2),
+.topic-nav table th:nth-child(2) {
+  width: 22%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  border-right: none;
+}
+
+/* Column 3: Icon (compact, fixed) */
+.topic-nav table td:nth-child(3),
+.topic-nav table th:nth-child(3) {
+  width: 13%;
+  text-align: center;
+  white-space: nowrap;
+  border-left: none;
+}
+
+/* =====================================
+   Table 7 (Icon | Title | Description)
+   ===================================== */
+
+/* Column 1: Icon (compact) */
+.topic-nav-summary table td:nth-child(1),
+.topic-nav-summary table th:nth-child(1) {
+  width: 10%;
+  text-align: center;
+  white-space: nowrap;
+  border-right: none;
+}
+/* Column 2: Title (medium, wraps) */
+.topic-nav-summary table td:nth-child(2),
+.topic-nav-summary table th:nth-child(2) {
+  width: 28%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  border-left: none;
+}
+/* Column 3: Description (wide, wraps) */
+.topic-nav-summary table td:nth-child(3),
+.topic-nav-summary table th:nth-child(3) {
+  width: 62%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 0 1.25rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}

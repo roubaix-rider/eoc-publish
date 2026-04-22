@@ -1,0 +1,512 @@
+/* =====================================
+   EoC HTML Stylesheet
+   ===================================== */
+body {
+  font-family: "Optima", "Optima Regular", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 400;   /* Regular */
+  line-height: 1.4;
+  font-size: 1rem;
+  max-width: 700px;          /* page width in characters for readability -- don't want lines too long! */
+  color: #222;               /* dark gray -- easier on the eyes */
+  background: #fff;
+  margin: 0 auto; 
+  padding: 0 4rem;
+}
+main {
+  max-width: 700px;          /* page width in characters for readability -- don't want lines too long! */
+  color: #222;               /* dark gray -- easier on the eyes */
+  width: min(700px, 100%);
+  background: #fff;
+  margin: 0 auto; 
+  padding: 0 4rem;
+  box-sizing: border-box;
+}
+
+/* Document fonts */
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  font-size: 3rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 300;   /* Light */
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-top: 2.0rem;
+  margin-bottom: 0.3rem;
+}
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 400;   /* Regular */
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.3;
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+}
+.author {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0.6rem
+}
+.reviewers {
+  color: #8D2515;
+}
+
+/* Section Notes and End Notes headings override -- matches h2 formatting and adds border line. */
+.section-notes-title,
+.end-notes-title {
+  font-weight: 300;
+  text-align: center;
+  font-size: 2rem;          
+  line-height: 1.3;
+  margin-top: 5rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid #b8b8b8;
+}
+
+/* ---------- Table of Contents ---------- */
+#table-of-contents, #table-of-contents-1 h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+#table-of-contents-1 h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+.toc-links {
+  column-count: 2;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.toc-links p {
+  break-inside: avoid;
+  margin-bottom: 0.4rem;
+  margin: 0 0 0.35rem 0;
+}
+
+/* This CSS is for the sidebar navigation ToC, which includes icons and links */
+/* Hide sidebar elements by default on narrow screens */
+.extra-nav,
+.section-toc-icon {
+  display: none;
+}
+
+/* Default ToC icons */
+.toc-icon {
+  height: 48px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+/* Smaller icon for Reading Guide row */
+.rg-icon {
+  height: 32px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* CSS code to highlight the icon/link corresponding to the section the user is currently reading. */
+/*    Here's the color scheme: https://www.color-hex.com/color/a9e1c8  */
+.section-toc-icon tr.active td {
+  background-color: #d4f0e3;
+}
+.section-toc-icon a.active {
+  font-weight: 600;
+  color: #547064;
+}
+
+@media screen and (min-width: 900px) {
+  .toc-links {
+    display: none;
+  }
+  .toc-hide {
+    display: none;
+  }
+  .section-nav {
+    display: none;
+  }
+  /* Shared sidebar column behavior */
+  .extra-nav,
+  .section-toc-icon {
+    display: block;
+    position: fixed;
+    left: 2rem;
+    width: 240px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    padding-right: 1rem;
+    background: #fff;
+  }
+  /* Top Reading Guide row */
+  .extra-nav {
+    top: 1rem;
+    padding-bottom: 0rem;
+    z-index: 10;
+  }
+  .extra-nav table {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;           /* ensures padding doesn't overflow */
+    padding-right: 1rem;              /* creates gap from sidebar border */
+    border-collapse: collapse;
+    border-bottom: 2px solid #0645ad; /* old choice of color was #777 */
+  }
+  .extra-nav td {
+    border: none;
+    vertical-align: middle;
+    padding: 0.2rem 0.2rem;
+    padding-bottom: 0.8rem;
+  }
+  .extra-nav td:first-child {
+    width: 2.5rem;
+  }
+  .extra-nav td:nth-child(2) {
+    width: auto;
+  }
+  .extra-nav td:last-child {
+    width: 3rem;
+  }
+
+  /* Main sidebar ToC */
+  .section-toc-icon {
+    top: 4rem;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+  }
+  .section-toc-icon table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+  }
+  .section-toc-icon td:first-child {
+    width: 5rem;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+  }
+  .section-toc-icon td:last-child {
+    width: auto !important;
+    border: none;
+  }
+  .section-toc-icon td:last-child,
+  .section-toc-icon td:last-child a {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  /* Push main content right to make room for sidebar */
+  body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 320px;
+  }
+  main {
+    max-width: 700px;
+    width: calc(100vw - 320px);
+    margin: 0 auto;
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+}
+
+/* ---------- Paragraphs ---------- */
+p {
+  margin: 0.4rem 0;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footnote references (no underline) ---------- */
+a.footnote-ref {
+  text-decoration: none;
+}
+/* fallback in case Pandoc uses <sup><a> without class */
+sup a {
+  text-decoration: none;
+}
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.85em;
+}
+section.footnotes ul {
+  list-style-type: disc;  /* Make footnote bullets a solid disc */
+}
+
+/* ---------- Images ---------- */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+/* Figures / diagram */
+.diagram {
+  max-width: min(700px, 90%);
+  margin: 1.5rem auto;
+}
+.diagram-cartoon {   /* scale retired theologian carton */
+  width: 80%;
+  margin: 2rem auto;
+  display: block;
+}
+.diagram-smaller {   /* scale images for improved visual design */
+  width: 70%;
+  margin: 2rem auto;
+  display: block;
+}
+.diagram-float-right {
+  float: right;
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  margin: 0.2rem 0 1rem 1rem;
+}
+@media (max-width: 700px) {
+  .diagram-float-right {
+    float: none;
+    display: block;
+    width: 80%;
+    max-width: 260px;
+    margin: 1rem auto;
+  }
+}
+.diagram-float-left {
+  float: left;
+  width: 220px;
+  margin: 0.2rem 1rem 1rem 0;
+}
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #222;
+  text-align: center;
+}
+
+/* ---------- Tables ---------- */
+/* Tables - summary table */
+.table-summary {
+  border: 2px solid #C58F33;
+  border-collapse: collapse;
+}
+.table-summary th {
+  background-color: #FAE3BA;
+}
+.table-summary {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-summary th, .table-summary td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+.table-summary tbody tr:nth-child(even) {
+  background-color: #F9F5E8;
+}
+/* Tables - informational table */
+.table-info {
+  border: 2px solid #0076BA;
+  border-collapse: collapse;
+}
+.table-info th {
+  background-color: #C2DCFB;
+}
+.table-info {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-info th {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  vertical-align: bottom;
+}
+.table-info td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+.table-info tbody tr:nth-child(even) {
+  background-color: #DFF3FF;
+}
+/* Tables - end-of-section navigation links */
+.section-nav table {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  border-top: 1px solid #0645ad;
+  border-bottom: 1px solid #0645ad;
+}
+/*.section-nav table,*/
+.section-nav th,
+.section-nav td {
+  border: none;
+}
+.section-nav td {
+  text-align: center;
+}
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.nav-arrow {
+  height: 1em;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+/* Base table behavior */
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  clear: both;
+}
+/* Default table styling (only if no class is used) */
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+th {
+  background: #f5f5f5;
+}
+
+/* ---------- Blockquotes ---------- */
+blockquote {
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #444;
+  border-left: 3px solid #c4b5e0;
+}
+blockquote.blockquote-indent {
+  margin-left: 2.1rem;   /* match your ul padding */
+  border-left: 3px solid #d6cfe8;  /* your lavender */
+  padding-left: 0.6rem;
+  padding-right: 2rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  margin: 0.4rem 0 0.2rem 0;   /* remove left margin */
+  padding-left: 2.1rem;        /* control indent here */
+}
+li {
+  margin: 0rem 0;
+  padding-right: 2rem;
+}
+.compact-no-bullet-list p {
+  margin: 0rem 0;
+}
+
+/* ---------- Footnotes ---------- */
+a.footnote-ref {
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.footnotes {
+  font-size: 0.9em;
+  margin-top: 0.3rem;
+  padding-top: 1rem;
+}
+/* ---------- Styling for Tippy Footnote Hover behavior ---------- */
+.tippy-box[data-theme~='light-border'] {
+  font-family: Avenir, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #222;
+  border: 1.5px solid #222 !important;  /* !important overrides Tippy format */
+  box-shadow: 0 10px 25px rgba(6, 6, 6, 0.50) !important;
+}
+.tippy-box[data-theme~='light-border'] > .tippy-content {
+  text-align: left;
+  padding: 0.65rem 0.8rem;
+}
+.tippy-box[data-theme~='light-border'] em {
+  font-style: italic;
+}
+.tippy-box[data-theme~='light-border'] strong {
+  font-weight: 600;
+}
+
+/* ---------- Callout blocks ---------- */
+
+.callout {
+  border-left: 4px solid #888;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* ---------- Architecture statements ---------- */
+
+.architecture {
+  text-align: center;
+  font-style: italic;
+  margin: 2rem 0;
+}
+
+/* ---------- Horizontal rule ---------- */
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+  display: none;
+}
+
+/* ---------- Small refinements ---------- */
+strong {
+  font-weight: 600;
+}
+em {
+  font-style: italic;
+}
+
+/* ---------- Footer copyright notice ---------- */
+footer {
+  margin-top: 3rem;      /* space above footer */
+  padding-top: 1rem;     /* space inside footer */
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+
