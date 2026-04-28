@@ -368,7 +368,7 @@ figcaption {
   border-top: 1px solid #0645ad;
   border-bottom: 1px solid #0645ad;
 }
-/*.section-nav table,*/
+/* .section-nav table */
 .section-nav th,
 .section-nav td {
   border: none;
@@ -388,6 +388,21 @@ figcaption {
   padding: 0;
   margin: 0;
 }
+/* the following CSS is to make the table look right on a  mobile phone, with a very
+   narrow screen. */
+@media screen and (max-width: 600px) {
+  .section-nav tr {
+    display: block;
+  }
+
+  .section-nav td {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.25rem 0;
+  }
+}
+
 /* Base table behavior */
 table {
   border-collapse: collapse;

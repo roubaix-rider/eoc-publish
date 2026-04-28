@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const headings = Array.from(
-    document.querySelectorAll('h2[id]:not(#table-of-contents):not(#table-of-contents-1):not(#interlude)')
+    document.querySelectorAll('h2[id]:not(#table-of-contents):not(#table-of-contents-1):not(#interlude), h3#end-notes')
   );
 
   const tocLinks = Array.from(
