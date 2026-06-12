@@ -160,29 +160,21 @@ tbody tr:nth-child(even) {
 }
 
 /* =====================================
-   Table 7 (Icon | Title | Description)
+   Table 7 (Title | Description)
    ===================================== */
 
-/* Column 1: Icon (compact) */
+/* Column 1: Title (medium, wraps) */
 .topic-nav-summary table td:nth-child(1),
 .topic-nav-summary table th:nth-child(1) {
-  width: 10%;
-  text-align: center;
-  white-space: nowrap;
-  border-right: none;
-}
-/* Column 2: Title (medium, wraps) */
-.topic-nav-summary table td:nth-child(2),
-.topic-nav-summary table th:nth-child(2) {
-  width: 28%;
+  width: 35%;
   white-space: normal;
   overflow-wrap: break-word;
   border-left: none;
 }
-/* Column 3: Description (wide, wraps) */
-.topic-nav-summary table td:nth-child(3),
-.topic-nav-summary table th:nth-child(3) {
-  width: 62%;
+/* Column 2: Description (wide, wraps) */
+.topic-nav-summary table td:nth-child(2),
+.topic-nav-summary table th:nth-child(2) {
+  width: 65%;
   white-space: normal;
   overflow-wrap: break-word;
 }

@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const headings = Array.from(
-    document.querySelectorAll('h2[id]:not(#table-of-contents):not(#table-of-contents-1):not(#interlude), h3#end-notes')
+    document.querySelectorAll(
+      'h1[id], h2[id]:not(#table-of-contents):not(#table-of-contents-1):not(#interlude), h3#end-notes'
+    )
   );
 
   const tocLinks = Array.from(
@@ -10,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!headings.length || !tocLinks.length) return;
 
   const linkMap = new Map();
+
   tocLinks.forEach(link => {
     const id = link.getAttribute("href").slice(1);
     linkMap.set(id, link);
@@ -18,20 +21,36 @@ document.addEventListener("DOMContentLoaded", function () {
   function clearActive() {
     tocLinks.forEach(link => {
       link.classList.remove("active");
+
       const row = link.closest("tr");
       if (row) row.classList.remove("active");
+      
+      const part = link.closest(".toc-part");
+      if (part) part.classList.remove("active");
     });
   }
 
   function setActive(id) {
     clearActive();
+
     const link = linkMap.get(id);
     if (!link) return;
 
     link.classList.add("active");
+
     const row = link.closest("tr");
     if (row) row.classList.add("active");
+
+    const part = link.closest(".toc-part");
+    if (part) part.classList.add("active");
   }
+
+  tocLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const id = link.getAttribute("href").slice(1);
+      setActive(id);
+    });
+  });
 
   const observer = new IntersectionObserver(
     entries => {

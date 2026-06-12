@@ -38,6 +38,8 @@ h1 {
   line-height: 1.3;
   margin-top: 2.5rem;
   margin-bottom: 0.6rem;
+  border-top: 2px solid #ccc;
+  padding-top: 1rem
 }
 h2 {
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
@@ -80,6 +82,9 @@ h3 {
 }
 
 /* ---------- Table of Contents ---------- */
+/* Note: table-of-contents is the inline ToC */
+/*       table-of-contents-1 is the sidebar ToC */
+
 #table-of-contents, #table-of-contents-1 h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0.4rem;
@@ -100,6 +105,10 @@ h3 {
   break-inside: avoid;
   margin-bottom: 0.4rem;
   margin: 0 0 0.35rem 0;
+}
+/*  The indent is for grouping sections with Parts I, II & III */
+.toc-indent {
+  margin-left: 1em;
 }
 
 /* This CSS is for the sidebar navigation ToC, which includes icons and links */
@@ -170,7 +179,7 @@ h3 {
     box-sizing: border-box;           /* ensures padding doesn't overflow */
     padding-right: 1rem;              /* creates gap from sidebar border */
     border-collapse: collapse;
-    border-bottom: 2px solid #0645ad; /* old choice of color was #777 */
+    border-bottom: 2px solid #0645ad;
   }
   .extra-nav td {
     border: none;
@@ -215,6 +224,16 @@ h3 {
     white-space: normal;
     overflow-wrap: break-word;
     word-break: normal;
+  }
+  .toc-part {
+    border-top: 1px solid #0645ad;
+    border-bottom: 1px solid #0645ad;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .toc-part.active {
+    background-color: #d4f0e3;
   }
 
   /* Push main content right to make room for sidebar */
@@ -294,6 +313,13 @@ img {
   height: auto;
   margin: 0.2rem 0 1rem 1rem;
 }
+.diagram-float-right-small {
+  float: right;
+  width: 20%;
+  max-width: 150px;
+  height: auto;
+  margin: 0.2rem 0 1rem 1rem;
+}
 @media (max-width: 700px) {
   .diagram-float-right {
     float: none;
@@ -312,10 +338,14 @@ figcaption {
   text-align: center;
   font-size: 0.9em;
   color: #222;
-  text-align: center;
 }
 
 /* ---------- Tables ---------- */
+caption {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.2em;
+}
 /* Tables - summary table */
 .table-summary {
   border: 2px solid #C58F33;
@@ -394,7 +424,6 @@ figcaption {
   .section-nav tr {
     display: block;
   }
-
   .section-nav td {
     display: block;
     width: 100%;
@@ -410,6 +439,7 @@ table {
   width: 100%;
   clear: both;
 }
+
 /* Default table styling (only if no class is used) */
 th, td {
   border: 1px solid #ddd;
@@ -459,6 +489,7 @@ a.footnote-ref {
   margin-top: 0.3rem;
   padding-top: 1rem;
 }
+
 /* ---------- Styling for Tippy Footnote Hover behavior ---------- */
 .tippy-box[data-theme~='light-border'] {
   font-family: Avenir, sans-serif;
