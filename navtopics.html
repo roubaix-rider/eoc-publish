@@ -2,40 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="robots" content="noindex">
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Essay Navigation</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+<title>Essay Navigation</title>
+<style>
+  /* Default styles provided by pandoc.
+  ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+  */
+  span.smallcaps{font-variant: small-caps;}
+  div.columns{display: flex; gap: 1.5em;}
+  div.column{flex: auto;}
+  @media screen {
+  div.columns{gap: min(4vw, 1.5em);}
+  div.column{overflow-x: auto;}
+  }
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  /* The extra [class] is a hack that increases specificity enough to
+     override a similar rule in reveal.js */
+  ul.task-list[class]{list-style: none;}
+  ul.task-list li input[type="checkbox"] {
+    font-size: inherit;
+    width: 0.8em;
+    margin: 0 0.8em 0.2em -1.6em;
+    vertical-align: middle;
+  }
+  .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
   <link rel="stylesheet" href="navtopics.css" />
 <!-- Stylesheets for Tippy (see Tippy script insertion below) -->
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css">
 </head>
 <body>
-
-<!-- Remove instructions to add title to document   
-<header id="title-block-header">
-<h1 class="title">Essay Navigation</h1> -->
-
-</header>
 <h1 id="reading-guide">Reading Guide</h1>
 <p><a href="index.html">[Back to Main Essay]</a></p>
 <h2 id="reading-the-essay-by-topic">Reading the Essay by Topic</h2>
@@ -43,6 +42,7 @@
 essay.&nbsp; Rather than reading straight through from beginning to end,
 you can start with the section that best matches your main questions,
 concerns, or interest.</p>
+<p>The estimated reading time for the entire essay is 3 hr 39 min.</p>
 <h2 id="starting-points-based-on-your-interest">Starting Points Based on
 Your Interest</h2>
 <p><a href="index.html">[Back to Main Essay]</a></p>
@@ -55,6 +55,7 @@ is about truth and credibility</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -63,6 +64,7 @@ is about truth and credibility</h3>
 <tr>
 <td style="text-align: left;"><strong>Start here</strong> if your main
 concern is that modern science and theology seem incompatible.</td>
+<td style="text-align: left;">10 min</td>
 <td
 style="text-align: left;"><a href="index.html#appendix-foundational-questions" target="_blank">Appendix:
 Foundational Questions</a></td>
@@ -73,12 +75,14 @@ style="text-align: center;"><img src="images/foundations.webp" class="toc-icon" 
 <td style="text-align: left;"><strong>Start here</strong> if your main
 concern is that the Bible doesn’t seem to be a trustworthy historical
 document, or if you believe that modern science has debunked Scripture
-and reduced it to myth or legend.<br><br><em>Note: the main purpose of
-this essay is to tell the central storyline of
-Scripture.&nbsp; Therefore, if you reject Scripture, you likely won’t be
-interested in this essay.&nbsp; On the other hand, many footnotes (End
-Notes) are provided so that if you are interested, you can read about
-the concepts in Scripture for yourself.</em></td>
+and reduced it to myth or legend.<br><br><em>Note: The primary purpose
+of this essay is to present the central storyline of
+Scripture.&nbsp; Therefore, readers who reject Scripture as a meaningful
+source of truth will likely find little reason to continue.&nbsp; For
+those willing to examine its claims, however, extensive footnotes (End
+Notes) are provided so you can read the relevant passages for
+yourself.</em></td>
+<td style="text-align: left;">15 min</td>
 <td
 style="text-align: left;"><a href="index.html#appendix-scripture-modern-science" target="_blank">Appendix:
 Scripture &amp; Modern Science</a></td>
@@ -95,6 +99,7 @@ picture first</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -103,6 +108,7 @@ picture first</h3>
 <tr>
 <td style="text-align: left;">Read this section if you’d like to learn
 exactly what Jesus says you need to do to be “saved.”</td>
+<td style="text-align: left;">23 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-remedy-defined" target="_blank">Love
 Restored: The Remedy</a></td>
@@ -112,6 +118,7 @@ style="text-align: center;"><img src="images/remedy.webp" class="toc-icon" alt="
 <tr>
 <td style="text-align: left;">Read this section to learn the unifying
 theme of the essay as well as its organization.</td>
+<td style="text-align: left;">4 min</td>
 <td
 style="text-align: left;"><a href="index.html#introduction" target="_blank">Introduction</a></td>
 <td
@@ -120,6 +127,7 @@ style="text-align: center;"><img src="images/intro.webp" class="toc-icon" alt="I
 <tr>
 <td style="text-align: left;">Read this section to see how the essay’s
 major themes fit together into a single framework.</td>
+<td style="text-align: left;">7 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-arc-of-love" target="_blank">The
 Arc of Love</a></td>
@@ -129,6 +137,7 @@ style="text-align: center;"><img src="images/toc-arc.webp" class="toc-icon" alt=
 <tr>
 <td style="text-align: left;">Read this section if you want a visual and
 conceptual recap of the essay’s main theme.</td>
+<td style="text-align: left;">8 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-architecture-of-love" target="_blank">The
 Architecture of Love</a></td>
@@ -136,8 +145,19 @@ Architecture of Love</a></td>
 style="text-align: center;"><img src="images/arch.webp" class="toc-icon" alt="Architecture of Love icon"></td>
 </tr>
 <tr>
+<td style="text-align: left;">Read this section for a vision of the life
+for which God created humanity.</td>
+<td style="text-align: left;">3 min</td>
+<td
+style="text-align: left;"><a href="index.html#becoming-truly-human" target="_blank">Becoming
+Truly Human</a></td>
+<td
+style="text-align: center;"><img src="images/toc-truly-human.webp" class="toc-icon" alt="Becoming Truly Human icon"></td>
+</tr>
+<tr>
 <td style="text-align: left;">Read this section to learn about the
 author and his motivations for writing the essay.</td>
+<td style="text-align: left;">9 min</td>
 <td
 style="text-align: left;"><a href="index.html#foreword" target="_blank">Foreword</a></td>
 <td
@@ -153,6 +173,7 @@ concern is about faith, reason, and knowing</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -161,6 +182,7 @@ concern is about faith, reason, and knowing</h3>
 <tr>
 <td style="text-align: left;"><strong>Start here</strong> if you believe
 faith is irrational, blind belief, or opposed to reason.</td>
+<td style="text-align: left;">24 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-frontier-of-faith" target="_blank">Faith,
 the Final Frontier</a></td>
@@ -170,6 +192,7 @@ style="text-align: center;"><img src="images/faith-frontier.webp" class="toc-ico
 <tr>
 <td style="text-align: left;">Read this section to understand why faith
 is necessary for a relationship with God.</td>
+<td style="text-align: left;">12 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-necessity-of-faith" target="_blank">The
 Necessity of Faith</a></td>
@@ -180,6 +203,7 @@ style="text-align: center;"><img src="images/faith-fog.webp" class="toc-icon" al
 <td style="text-align: left;">Read this section if you want to
 understand how faith, hope, and love work together as a coherent
 relational structure.</td>
+<td style="text-align: left;">6 min</td>
 <td
 style="text-align: left;"><a href="index.html#faith-and-hope-in-a-world-of-love" target="_blank">Faith
 and Hope in a World of Love</a></td>
@@ -197,6 +221,7 @@ want to know how God reveals Himself or how I might encounter Him</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -205,6 +230,7 @@ want to know how God reveals Himself or how I might encounter Him</h3>
 <tr>
 <td style="text-align: left;">Read this section if your concern is how
 God might reveal Himself or how He might be encountered.</td>
+<td style="text-align: left;">10 min</td>
 <td
 style="text-align: left;"><a href="index.html#freedom-and-faith" target="_blank">Freedom
 and Faith</a></td>
@@ -221,6 +247,7 @@ Christians or the church</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -230,6 +257,7 @@ Christians or the church</h3>
 <td style="text-align: left;"><strong>Start here</strong> if painful
 experiences with Christians or the church have made it difficult for you
 to re-engage with God.</td>
+<td style="text-align: left;">10 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-empowered" target="_blank">Love
 Empowered</a></td>
@@ -246,6 +274,7 @@ the central story arc</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -254,6 +283,7 @@ the central story arc</h3>
 <tr>
 <td style="text-align: left;">Read this section for a brief description
 of the nature of God.</td>
+<td style="text-align: left;">3 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-god-who-is-love" target="_blank">The
 God Who is Love</a></td>
@@ -264,6 +294,7 @@ style="text-align: center;"><img src="images/God-is-love.webp" class="toc-icon" 
 <td style="text-align: left;">Read this section to understand God’s
 original intent for the cosmos and humanity.&nbsp; This section
 introduces the Cultural Mandate.</td>
+<td style="text-align: left;">6 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-expressed-imago-dei" target="_blank">Love
 Expressed: Imago Dei</a></td>
@@ -274,6 +305,7 @@ style="text-align: center;"><img src="images/imago.webp" class="toc-icon" alt="I
 <td style="text-align: left;">Read this section to understand Jesus’
 commands to love God and our fellow humans.&nbsp; The concept of Love
 Precepts is defined here.</td>
+<td style="text-align: left;">7 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-an-image-bearers-behavior" target="_blank">Love:
 An Image Bearer's Behavior</a></td>
@@ -284,9 +316,10 @@ style="text-align: center;"><img src="images/image-bearer.webp" class="toc-icon"
 <td style="text-align: left;">Read this section to understand Adam and
 Eve’s choice in Eden and the consequences of that choice for
 humanity.</td>
+<td style="text-align: left;">13 min</td>
 <td
-style="text-align: left;"><a href="index.html#love-rejected-the-fall" target="_blank">Love
-Rejected: The Fall</a></td>
+style="text-align: left;"><a href="index.html#love-rejected" target="_blank">Love
+Rejected</a></td>
 <td
 style="text-align: center;"><img src="images/the-fall.webp" class="toc-icon" alt="The Fall icon"></td>
 </tr>
@@ -294,6 +327,7 @@ style="text-align: center;"><img src="images/the-fall.webp" class="toc-icon" alt
 <td style="text-align: left;">Read this section to see why, even after
 humanity’s rebellion, God still intends to have a people of his
 own.</td>
+<td style="text-align: left;">8 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-revisited-god-still-wants-a-people" target="_blank">Love
 Revisited: God Still Wants a People</a></td>
@@ -303,6 +337,7 @@ style="text-align: center;"><img src="images/people.webp" class="toc-icon" alt="
 <tr>
 <td style="text-align: left;">Read this section to understand God’s
 remedy for the human condition.</td>
+<td style="text-align: left;">23 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-restored-the-remedy" target="_blank">Love
 Restored: The Remedy</a></td>
@@ -312,6 +347,7 @@ style="text-align: center;"><img src="images/remedy.webp" class="toc-icon" alt="
 <tr>
 <td style="text-align: left;">Read this section to see what your life
 will be transformed into if you accept God’s remedy.</td>
+<td style="text-align: left;">10 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-empowered" target="_blank">Love
 Empowered</a></td>
@@ -321,6 +357,7 @@ style="text-align: center;"><img src="images/empowered.webp" class="toc-icon" al
 <tr>
 <td style="text-align: left;">Read this section for the essay’s closing
 perspective and invitation.</td>
+<td style="text-align: left;">5 min</td>
 <td
 style="text-align: left;"><a href="index.html#epilogue-the-invitation-of-love" target="_blank">Epilogue:
 The Invitation of Love</a></td>
@@ -337,6 +374,7 @@ about suffering and evil</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -346,9 +384,10 @@ about suffering and evil</h3>
 <td style="text-align: left;"><strong>Start here</strong> if your main
 concern is that the pervasiveness of evil in the world shows that God
 cannot be good.</td>
+<td style="text-align: left;">11 min</td>
 <td
-style="text-align: left;"><a href="index.html#love-contested-the-mystery-of-evil" target="_blank">Love
-Contested: The Mystery of Evil</a></td>
+style="text-align: left;"><a href="index.html#the-mystery-of-evil" target="_blank">The
+Mystery of Evil</a></td>
 <td
 style="text-align: center;"><img src="images/mystery.webp" class="toc-icon" alt="Mystery of evil icon"></td>
 </tr>
@@ -356,6 +395,7 @@ style="text-align: center;"><img src="images/mystery.webp" class="toc-icon" alt=
 <td style="text-align: left;"><strong>Start here</strong> if your main
 concern is the presence of natural evil in our world and why a good God
 would allow so much of it.</td>
+<td style="text-align: left;">12 min</td>
 <td
 style="text-align: left;"><a href="index.html#loves-gambit" target="_blank">Love's
 Gambit</a></td>
@@ -366,6 +406,7 @@ style="text-align: center;"><img src="images/gambit.webp" class="toc-icon" alt="
 <td style="text-align: left;">Read this section if you want to explore
 the possibility that evil includes unseen spiritual corruption in
 addition to human failure.</td>
+<td style="text-align: left;">7 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-corrupted-by-deception" target="_blank">Love
 Corrupted by Deception</a></td>
@@ -382,6 +423,7 @@ about justice and hell</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -391,6 +433,7 @@ about justice and hell</h3>
 <td style="text-align: left;"><strong>Start here</strong> if you
 wonder:<br>- Why would a good God create hell?<br>- Why is hell
 eternal?<br>- Is Christianity primarily about avoiding hell?</td>
+<td style="text-align: left;">10 min</td>
 <td
 style="text-align: left;"><a href="index.html#love-and-the-reality-of-hell" target="_blank">Love
 and the Reality of Hell</a></td>
@@ -407,6 +450,7 @@ understand the essay’s overall synthesis</h3>
 <thead>
 <tr>
 <th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Read In</th>
 <th style="text-align: left;">Section</th>
 <th style="text-align: center;"></th>
 </tr>
@@ -415,6 +459,7 @@ understand the essay’s overall synthesis</h3>
 <tr>
 <td style="text-align: left;">Read this section to see how the major
 themes of the essay converge into a single explanatory framework.</td>
+<td style="text-align: left;">7 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-arc-of-love" target="_blank">The
 Arc of Love</a></td>
@@ -424,6 +469,7 @@ style="text-align: center;"><img src="images/toc-arc.webp" class="toc-icon" alt=
 <tr>
 <td style="text-align: left;">Read this section to understand how faith
 and hope emerge naturally from a reality ordered toward love.</td>
+<td style="text-align: left;">3 min</td>
 <td
 style="text-align: left;"><a href="index.html#faith-and-hope-in-a-world-of-love" target="_blank">Faith
 and Hope in a World of Love</a></td>
@@ -433,6 +479,7 @@ style="text-align: center;"><img src="images/faith-hope-love.webp" class="toc-ic
 <tr>
 <td style="text-align: left;">Read this section to explore patterns
 within reality that point toward relationship, meaning, and love.</td>
+<td style="text-align: left;">3 min</td>
 <td
 style="text-align: left;"><a href="index.html#signatures-of-love-in-reality" target="_blank">Signatures
 of Love in Reality</a></td>
@@ -442,11 +489,23 @@ style="text-align: center;"><img src="images/signatures.webp" class="toc-icon" a
 <tr>
 <td style="text-align: left;">Read this section if you want a visual and
 conceptual summary of the essay’s central thesis.</td>
+<td style="text-align: left;">8 min</td>
 <td
 style="text-align: left;"><a href="index.html#the-architecture-of-love" target="_blank">The
 Architecture of Love</a></td>
 <td
 style="text-align: center;"><img src="images/arch.webp" class="toc-icon" alt="Architecture of Love icon"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Read this section to discover the
+destination of redemption—what it means to become fully the human being
+God created us to be.</td>
+<td style="text-align: left;">3 min</td>
+<td
+style="text-align: left;"><a href="index.html#becoming-truly-human" target="_blank">Becoming
+Truly Human</a></td>
+<td
+style="text-align: center;"><img src="images/toc-truly-human.webp" class="toc-icon" alt="Becoming Truly Human icon"></td>
 </tr>
 </tbody>
 </table>
@@ -490,6 +549,7 @@ sections.</p>
 <tr>
 <th style="text-align: left;">Major Section</th>
 <th style="text-align: left;">What it helps you understand</th>
+<th style="text-align: left;">Read In</th>
 </tr>
 </thead>
 <tbody>
@@ -498,6 +558,7 @@ sections.</p>
 style="text-align: left;"><a href="index.html#introduction" target="_blank">Introduction</a></td>
 <td style="text-align: left;">The essay’s central thesis and
 structure.</td>
+<td style="text-align: left;">4 min</td>
 </tr>
 <tr>
 <td
@@ -505,6 +566,7 @@ style="text-align: left;"><a href="index.html#part-i-the-storyline-of-love" targ
 I: The Storyline of Love</a></td>
 <td style="text-align: left;">The Christian story viewed through the
 lens of love.</td>
+<td style="text-align: left;">1 hr 16 min</td>
 </tr>
 <tr>
 <td
@@ -512,6 +574,7 @@ style="text-align: left;"><a href="index.html#part-ii-the-role-of-faith" target=
 II: The Role of Faith</a></td>
 <td style="text-align: left;">Why faith, trust, hope, and epistemic
 openness are necessary for relationship.</td>
+<td style="text-align: left;">52 min</td>
 </tr>
 <tr>
 <td
@@ -519,6 +582,7 @@ style="text-align: left;"><a href="index.html#part-iii-the-realm-of-evil" target
 III: The Realm of Evil</a></td>
 <td style="text-align: left;">Why evil, suffering, deception, and
 disorder exist.</td>
+<td style="text-align: left;">29 min</td>
 </tr>
 <tr>
 <td
@@ -526,16 +590,50 @@ style="text-align: left;"><a href="index.html#part-iv-convergence" target="_blan
 IV: Convergence</a></td>
 <td style="text-align: left;">How the major themes of the essay fit
 together into a coherent whole.</td>
+<td style="text-align: left;">28 min</td>
 </tr>
 <tr>
 <td
 style="text-align: left;"><a href="index.html#appendices" target="_blank">Appendices</a></td>
 <td style="text-align: left;">Scientific, philosophical, and biblical
 questions for further reading.</td>
+<td style="text-align: left;">24 min</td>
 </tr>
 </tbody>
 </table>
 </div>
+<h2 id="exploring-scripture-for-yourself">Exploring Scripture for
+Yourself</h2>
+<p>After having read the essay, you may be interested in exploring
+Scripture for yourself.&nbsp; Many people who are skeptical of religion
+or Christianity have never read Scripture carefully, much less reflected
+on it.&nbsp; Scripture makes an extraordinary claim about itself—<a
+href="https://www.biblegateway.com/passage/?search=hebrews%204:12&amp;version=NIV">Hebrews
+4:12</a> states that the word of God is <em>“alive and active,
+penetrating to our innermost soul.”</em> A good place to begin reading
+is one of the four gospels:</p>
+<ul>
+<li>The Gospel of <a
+href="https://www.biblegateway.com/passage/?search=Matthew%201&amp;version=NIV">Matthew</a>
+if you like structure and want to see Jesus as the promised
+Messiah.</li>
+<li>The Gospel of <a
+href="https://www.biblegateway.com/passage/?search=Mark%201&amp;version=NIV">Mark</a>
+if you prefer the shortest, fastest-paced, and action-oriented
+account.</li>
+<li>The Gospel of <a
+href="https://www.biblegateway.com/passage/?search=Luke%201&amp;version=NIV">Luke</a>
+if you prefer an account that’s detailed, orderly, and written with a
+historian’s mindset.</li>
+<li>The Gospel of <a
+href="https://www.biblegateway.com/passage/?search=John%201&amp;version=NIV">John</a>
+if you want an account which is more reflective and theological.</li>
+</ul>
+<p>You might also test the practical wisdom of the Bible.&nbsp; For
+example, read a chapter from <a
+href="https://www.biblegateway.com/passage/?search=Proverbs%201&amp;version=NIV">Proverbs</a>
+and try applying its guidance in everyday life.&nbsp; Wisdom that proves
+itself in experience invites deeper trust.</p>
 <!-- Add copyright as footer. -->
 <footer class="copyright-footer">
   <p>© 2026 Dave Stephenson. All rights reserved.</p>

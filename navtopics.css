@@ -119,7 +119,7 @@ img {
   vertical-align: middle;
 }
 
-/*    Here's the color scheme: https://www.color-hex.com/color/a9e1c8  */
+/* Here's the color scheme: https://www.color-hex.com/color/a9e1c8  */
 /* Table header row and alternating data-row background colors */
 tbody tr:nth-child(even) {
   background-color: #edf9f4;
@@ -129,44 +129,53 @@ tbody tr:nth-child(even) {
   background-color: #b1e4cd;
 }
 
-/* =====================================
-   Tables 1–6 (Topic | Title | Icon)
-   ===================================== */
+/* =================================================
+   Tables 1–6 (Topic | Reading Time | Title | Icon)
+   ================================================= */
 
 /* Column 1: Topic (wide, wraps) */
 .topic-nav table td:nth-child(1),
 .topic-nav table th:nth-child(1) {
-  width: 65%;
+  width: 55%;
   white-space: normal;
   overflow-wrap: break-word;
 }
 
-/* Column 2: Title (medium, wraps) */
+/* Column 2: Reading time (compact, no wrapping) */
 .topic-nav table td:nth-child(2),
 .topic-nav table th:nth-child(2) {
-  width: 22%;
+  width: 13%;
+  text-align: center;
+  white-space: nowrap;
+  border-right: none;
+}
+
+/* Column 3: Title (medium, wraps) */
+.topic-nav table td:nth-child(3),
+.topic-nav table th:nth-child(3) {
+  width: 20%;
   white-space: normal;
   overflow-wrap: break-word;
   border-right: none;
 }
 
-/* Column 3: Icon (compact, fixed) */
-.topic-nav table td:nth-child(3),
-.topic-nav table th:nth-child(3) {
-  width: 13%;
+/* Column 4: Icon (compact, fixed) */
+.topic-nav table td:nth-child(4),
+.topic-nav table th:nth-child(4) {
+  width: 12%;
   text-align: center;
   white-space: nowrap;
   border-left: none;
 }
 
 /* =====================================
-   Table 7 (Title | Description)
+   Table 7 (Title | Description | Reading Time)
    ===================================== */
 
 /* Column 1: Title (medium, wraps) */
 .topic-nav-summary table td:nth-child(1),
 .topic-nav-summary table th:nth-child(1) {
-  width: 35%;
+  width: 25%;
   white-space: normal;
   overflow-wrap: break-word;
   border-left: none;
@@ -174,7 +183,15 @@ tbody tr:nth-child(even) {
 /* Column 2: Description (wide, wraps) */
 .topic-nav-summary table td:nth-child(2),
 .topic-nav-summary table th:nth-child(2) {
-  width: 65%;
+  width: 55%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Column 3: Reading Time (wide, wraps) */
+.topic-nav-summary table td:nth-child(3),
+.topic-nav-summary table th:nth-child(3) {
+  width: 15%;
   white-space: normal;
   overflow-wrap: break-word;
 }

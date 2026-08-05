@@ -510,8 +510,24 @@ a.footnote-ref {
   font-weight: 600;
 }
 
-/* ---------- Callout blocks ---------- */
+/* ---------- Styling for Reading Guide tooltip ---------- */
+.reading-guide-tooltip {
+    position: fixed;
+    z-index: 99999;
+    max-width: 26rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: #222;
+    background: linear-gradient(135deg, #f8fcfa 0%, #edf8f4 50%, #f7fcfa 100%);
+    border: 1.5px solid #73b8a8;
+	box-shadow: 0 10px 25px rgba(6, 6, 6, 0.50);
+    pointer-events: none;
+    white-space: normal;
+    opacity: 1;
+}
 
+/* ---------- Callout blocks ---------- */
 .callout {
   border-left: 4px solid #888;
   padding-left: 1rem;
