@@ -68,6 +68,36 @@ h3 {
   margin-top: 0.6rem
 }
 
+/* Header to get Safari and perhaps other browsers to color the tabs and menu. */
+:root {
+  --site-header-height: 10px;
+}
+[id] {
+  scroll-margin-top: calc(var(--site-header-height) + 1rem);
+}
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--site-header-height);
+  background-color: #547064;
+  z-index: 10000;
+}
+
+/* Section Notes and End Notes headings override -- matches h2 formatting and adds border line. */
+.section-notes-title,
+.end-notes-title {
+  font-weight: 300;
+  text-align: center;
+  font-size: 2rem;          
+  line-height: 1.3;
+  margin-top: 5rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid #b8b8b8;
+}
+
 p {
   margin: 0.4rem 0;
 }
@@ -195,6 +225,51 @@ tbody tr:nth-child(even) {
   white-space: normal;
   overflow-wrap: break-word;
 }
+
+/* =====================================
+   End Notes table
+   ===================================== */
+
+.topic-nav-endnotes table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.topic-nav-endnotes th,
+.topic-nav-endnotes td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+.topic-nav-endnotes th {
+  background-color: #b1e4cd;
+}
+
+/* Column 1: Title */
+.topic-nav-endnotes td:nth-child(1),
+.topic-nav-endnotes th:nth-child(1) {
+  width: 68%;
+}
+
+/* Column 2: Description */
+.topic-nav-endnotes td:nth-child(2),
+.topic-nav-endnotes th:nth-child(2) {
+  width: 20%;
+  border-right: none;
+}
+
+/* Column 3: Icon / blank */
+.topic-nav-endnotes td:nth-child(3),
+.topic-nav-endnotes th:nth-child(3) {
+  width: 12%;
+  text-align: center;
+  border-left: none;
+  border-right: 1px solid #ddd;
+}
+
 
 strong {
   font-weight: 600;
